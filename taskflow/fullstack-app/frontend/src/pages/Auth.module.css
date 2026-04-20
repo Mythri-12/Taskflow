@@ -1,0 +1,202 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Background ── */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.orb1 {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,106,255,0.18) 0%, transparent 70%);
+  top: -140px;
+  left: -160px;
+  filter: blur(40px);
+}
+
+.orb2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34,211,164,0.12) 0%, transparent 70%);
+  bottom: -100px;
+  right: -80px;
+  filter: blur(40px);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Card ── */
+.card {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent), #9b8cff);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* ── Headings ── */
+.title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* ── Error ── */
+.error {
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: 8px;
+  color: #fc8181;
+  font-size: 13px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+/* ── Form ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.input {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 14px;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.input::placeholder { color: var(--text-dim); }
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* ── Button ── */
+.btn {
+  background: linear-gradient(135deg, var(--accent), #9b8cff);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  box-shadow: 0 4px 16px var(--accent-glow);
+  letter-spacing: 0.01em;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.btn:active:not(:disabled) { transform: translateY(0); }
+
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 24px;
+}
+
+.link {
+  color: var(--accent-light);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.link:hover { color: white; }

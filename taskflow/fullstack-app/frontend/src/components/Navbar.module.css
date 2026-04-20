@@ -1,0 +1,151 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, var(--accent), #9b8cff);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: white;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.right { display: flex; align-items: center; }
+
+.userWrap { position: relative; }
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent), #9b8cff);
+  border-radius: 50%;
+  border: 2px solid rgba(124,106,255,0.4);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, box-shadow 0.2s;
+  font-family: var(--font-display);
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  min-width: 220px;
+  padding: 8px;
+  box-shadow: var(--shadow);
+  z-index: 20;
+  animation: fadeIn 0.2s ease;
+}
+
+.dropUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 8px;
+}
+
+.dropAvatar {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent), #9b8cff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+}
+
+.dropName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.dropEmail {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.dropDivider {
+  height: 1px;
+  background: var(--border);
+  margin: 6px 0;
+}
+
+.dropItem {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.dropItem:hover {
+  background: rgba(239,68,68,0.1);
+  color: #fc8181;
+}
