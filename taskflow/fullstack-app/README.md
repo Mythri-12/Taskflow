@@ -4,13 +4,6 @@ A production-ready full-stack task management application built with React, Node
 
 ---
 
-## 🔗 Links
-
-| | |
-|---|---|
-| **Live App** | `https://taskflow-your-name.vercel.app` |
-| **API** | `https://taskflow-api-your-name.onrender.com` |
-
 ---
 
 ## ✨ Features
